@@ -25,4 +25,8 @@ Assistant:
 
 topic = topic.rstrip('.')
 
-print("Bot: " + topic)
+lm.store_doc(lm.get_wiki(topic))
+
+wikisnip = lm.get_doc_context(message)
+
+print("Bot: " + wikisnip)
