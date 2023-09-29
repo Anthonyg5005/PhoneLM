@@ -16,9 +16,9 @@ Assistant: Netflix
 User: What is the capital of France?
 Assistant: Paris
 User: Who wrote the play 'Romeo and Juliet'?
-Assistant: Shakespeare
+Assistant: William Shakespeare
 User: When was the Declaration of Independence signed?
-Assistant: Independence
+Assistant: Declaration of Independence
 User: {message}
 Assistant:
 ''')
