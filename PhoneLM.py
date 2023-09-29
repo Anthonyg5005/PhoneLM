@@ -5,7 +5,7 @@ import languagemodels as lm
 lm.set_max_ram('2gb')
 
 #variables
-message = input("User:")
+message = input("User: ")
 
 #print the resulting response
 print("Phone: " + lm.do(message))
