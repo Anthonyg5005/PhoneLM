@@ -23,4 +23,6 @@ User: {message}
 Assistant:
 ''')
 
+topic = topic.rstrip('.')
+
 print("Bot: " + topic)
