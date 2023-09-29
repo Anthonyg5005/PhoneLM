@@ -9,19 +9,19 @@ message = input("User: ")
 
 #extract the topic to find wiki by examples
 topic = lm.chat(f'''
-System: Get one keyword from the user's question and write it. Write only a single word and don't include punctuation like periods.
+System: Get one keyword from the user's question and write it. Write only a single keyword.
+User: Who wrote the play 'Romeo and Juliet'?
+Assistant: William Shakespeare
+User: When was the Declaration of Independence signed?
+Assistant: Declaration of Independence                
 User: What is minecraft?
 Assistant: Minecraft
-User: What is a well known social media site?
-Assistant: Twitter
+User: H ow many pages are on wikipedia?
+Assistant: Wikipedia
 User: Tell me about netflix.
 Assistant: Netflix
 User: What is the capital of France?
 Assistant: Paris
-User: Who wrote the play 'Romeo and Juliet'?
-Assistant: William Shakespeare
-User: When was the Declaration of Independence signed?
-Assistant: Declaration of Independence
 User: {message}
 Assistant:
 ''')
@@ -44,13 +44,15 @@ wikisnip = lm.get_doc_context(message)
 if(wikiresult == "No matching wiki page found."):
     print(f'''System: Couldn't find wiki page. Searched for: "{topic}"''')
     wikisnip = "No context available"
-    
+else:
+    print(f'''System: Wiki page found, searched for "{topic}"''')
+
 #give snippet as context
 response = lm.chat(f'''
-System: Use this context to respond if available, "{wikisnip}"
+System: Use this context to respond if available, if context not relevant say "Context not relevant to topic". Context: "{wikisnip}"
 User: {message}
 Assistant:
 ''')
 
 #print the resulting reply
-print("Bot: " + response)   
+print("Computer: " + response)   
