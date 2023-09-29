@@ -1,7 +1,7 @@
 # PhoneLM
 ## Running language models on a phone
 
-This is the example code for running a powerful language model on my Google Pixel 4 using the `languagemodels` python module. You can find the code on [GitHub](https://github.com/jncraton/languagemodels).
+This is the example code for running a powerful (*as much as a 2019 phone can handle*) language model on my Google Pixel 4 using the `languagemodels` python module. You can find the module on [GitHub](https://github.com/jncraton/languagemodels).
 
 You can find the demo through this [Ngrok link][replacewithlinkwhenfinished]
 
