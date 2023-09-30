@@ -16,7 +16,7 @@ User: When was the Declaration of Independence signed?
 Assistant: Declaration of Independence                
 User: What is minecraft?
 Assistant: Minecraft
-User: H ow many pages are on wikipedia?
+User: How many pages are on wikipedia?
 Assistant: Wikipedia
 User: Tell me about netflix.
 Assistant: Netflix
