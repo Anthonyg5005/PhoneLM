@@ -32,6 +32,8 @@ lm.set_max_ram('2gb')
 #remove punctuation before getting wiki
 topic = topic.rstrip('.')
 
+#Note for later: Add if statement to check if the lm said None, if so, continue without wiki
+
 #search for the topic on the wiki
 lm.store_doc(lm.get_wiki(topic))
 
@@ -42,17 +44,13 @@ wikisnip = lm.get_doc_context(message)
 
 #if first model failed it's task, show user the failed search, else continue as normal
 if(wikiresult == "No matching wiki page found."):
-    print(f'''System: Couldn't find wiki page. Searched for: "{topic}"''')
-    wikisnip = "No context available"
+    print(f'''System: Couldn't find wiki page, using internal knowledge. Searched for: "{topic}"''')
+    wikisnip = "No context available, respond with internal knowledge"
 else:
     print(f'''System: Wiki page found, searched for "{topic}"''')
 
 #give snippet as context
-response = lm.chat(f'''
-System: Use this context to respond if available, if context not relevant say "Context not relevant to topic". Context: "{wikisnip}"
-User: {message}
-Assistant:
-''')
+response = lm.do(f'''Answer using context if relevant: "{wikisnip}" Question: {message}''')
 
 #print the resulting reply
 print("Computer: " + response)   
