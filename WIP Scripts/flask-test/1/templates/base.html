@@ -9,6 +9,24 @@
     <script src="{{url_for('static', filename='htmx-1.9.6.min.js')}}"></script>
 </head>
 <body>
-    
+    <form hx-post="/generate-response" hx-target="#response" hx-swap="outerHTML">
+        <label for="text-input">Enter text:</label>
+        <input type="text" id="text-input" name="text-input">
+        <button type="submit">Submit</button>
+    </form>
+    <div id="response"></div>
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var textInput = document.querySelector('#text-input').value;
+            var payload = { 'text-input': textInput };
+            htmx.ajax({
+                method: 'POST',
+                url: '/generate-response',
+                body: payload,
+                headers: { 'Content-Type': 'application/json' }
+            });
+        });
+    </script>
 </body>
 </html>
