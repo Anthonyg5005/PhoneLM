@@ -6,7 +6,7 @@ This is the example code for running a powerful (*as much as a 2019 phone can ha
 You can find the demo through this [Ngrok tunnel][replacewithlinkwhenfinished]
 
 I run this using [Termux](https://termux.dev/en/) on Ubuntu version 22.04 from [Andronix](https://andronix.app/).\
-I used the 1 and 2 GB RAM models for this project as the phone only has 6GB of available memory and the next highest model is 4GB which did work, but it was slow and eventually crashed termux after finishing.
+I used the 1 and 2 GB RAM models for this project as the phone only has [6GB of available memory](https://en.m.wikipedia.org/wiki/Pixel_4) and the next highest model is 4GB which did work, but it was slow and eventually crashed termux after finishing.
 
 I don't believe you need to have a rooted device for any of this, but I will say my phone is running rooted Pixel OS.
 
