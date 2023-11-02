@@ -10,4 +10,4 @@ I used the 1 and 2 GB RAM models for this project as the phone only has [6GB of 
 
 I don't believe you need to have a rooted device for any of this, but I will say my phone is running rooted Pixel OS.
 
-Wouldn't be possible, or at least this easy, without [languagemodels](https://github.com/jncraton/languagemodels) and its dependencies.
+Wouldn't be possible, or at least this easy, without [languagemodels](https://github.com/jncraton/languagemodels) and its dependencies. (First one if counting my programming knowledge.)
