@@ -3,7 +3,7 @@
 
 This is the example code for running a powerful (*as much as a 2019 phone can handle*) language model on my Google Pixel 4 using the `languagemodels` python module. You can find the module on [GitHub](https://github.com/jncraton/languagemodels).
 
-You can find the demo through this [Ngrok tunnel][replacewithlinkwhenfinished]
+You can find the demo through this [Ngrok tunnel](https://crisp-joey-distinctly.ngrok-free.app/). **Currently running under a GPT3.5/Copilot generated interface**
 
 I run this using [Termux](https://termux.dev/en/) on Ubuntu version 22.04 from [Andronix](https://andronix.app/).\
 I used the 1 and 2 GB RAM models for this project as the phone only has [6GB of available memory](https://en.m.wikipedia.org/wiki/Pixel_4) and the next highest model is 4GB which did work, but it was slow and eventually crashed termux after finishing.
