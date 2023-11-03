@@ -9,24 +9,30 @@
     <script src="{{url_for('static', filename='htmx-1.9.6.min.js')}}"></script>
 </head>
 <body>
+    <h1>PLM test page</h1>
+    <h2>Only one message allowed, refresh to retry</h2>
     <form hx-post="/generate-response" hx-target="#response" hx-swap="outerHTML">
         <label for="text-input">Enter text:</label>
         <input type="text" id="text-input" name="text-input">
         <button type="submit">Submit</button>
     </form>
     <div id="response"></div>
-    <script>
-        document.querySelector('form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            var textInput = document.querySelector('#text-input').value;
-            var payload = { 'text-input': textInput };
-            htmx.ajax({
-                method: 'POST',
-                url: '/generate-response',
-                body: payload,
-                headers: { 'Content-Type': 'application/json' }
-            });
+<script>
+    document.querySelector('form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        var textInput = document.querySelector('#text-input').value;
+        var payload = { 'text-input': textInput };
+        htmx.ajax({
+            method: 'POST',
+            url: '/generate-response',
+            body: payload,
+            headers: { 'Content-Type': 'application/json' },
+            // Handle the response
+            success: function(data) {
+                document.getElementById('response').textContent = data;  // Display the response as plain text
+            }
         });
-    </script>
+    });
+</script>
 </body>
 </html>

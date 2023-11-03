@@ -19,12 +19,12 @@ def home():
 @app.route('/generate-response', methods=['POST'])
 def chat():
     message = request.form['text-input']
-    response = lm.chat(f'''
+    response = 'Phone: ' + lm.chat(f'''
         System: The assistant gives helpful, detailed, and polite answers to the human's questions. Limited to only one interaction, resulting in no memory of any previous interactions. It is currently {lm.get_date()} {zone}.{daylightsavings} 
         User: {message}
         Assistant:
     ''')
-    return jsonify({"response": response})
+    return response  # Return the response as plain text
 
 if __name__ == '__main__':
     app.run(debug=True)
