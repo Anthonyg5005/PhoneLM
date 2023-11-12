@@ -3,8 +3,6 @@
 
 This is the example code for running a powerful (*as much as a 2019 phone can handle*) language model on my Google Pixel 4 using the `languagemodels` python module. You can find the module on [GitHub](https://github.com/jncraton/languagemodels).
 
-You can find the demo through this [Ngrok tunnel](https://crisp-joey-distinctly.ngrok-free.app/). **Currently running under a GPT3.5/Copilot generated interface**
-
 ## How it works
 
 I run this using [Termux](https://termux.dev/en/) on Ubuntu version 22.04 from [Andronix](https://andronix.app/).\
