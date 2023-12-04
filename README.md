@@ -10,4 +10,6 @@ I used the 1 and 2 GB RAM models for this project as the phone only has [6GB of 
 
 I don't believe you need to have a rooted device for any of this, but I will say my phone is running rooted Pixel OS.
 
+To run this you just need to pip install -r requirements.txt and then run either of the two python files in working scripts. Normal is a more simple one and just gets real time info about the date and time. Wikipedia version is a bit more complicated and it first looks for a topic in the user's question, then it'll search that topic and if it exists as a wiki page then it'll get a relevant snippet as context to then respond to the original question
+
 Wouldn't be possible, or at least this easy, without [languagemodels](https://github.com/jncraton/languagemodels) and its dependencies. (First one if counting my programming knowledge.)
